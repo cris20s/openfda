@@ -4,7 +4,7 @@ import http.client
 import json
 
 # Puerto donde lanzar el servidor, utilizamos uno cualquiera superior a 1024
-PORT = 2022
+PORT = 2023
 
 
 def obtener_list():

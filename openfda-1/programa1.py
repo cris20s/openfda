@@ -18,5 +18,3 @@ print ('ID: ',datos_medic['id'])
 print ('Proposito: ',datos_medic['purpose'][0])
 
 print ('Fabricante: ',datos_medic['openfda']['manufacturer_name'][0])
-
-
