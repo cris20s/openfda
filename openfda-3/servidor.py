@@ -65,4 +65,4 @@ except KeyboardInterrupt:
 
 httpd.server_close()
 print("")
-print("¡Se ha parado el servidor! ¡Revíselo!")
+print("¡Se ha parado el servidor!")
