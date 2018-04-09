@@ -4,7 +4,7 @@ import http.client
 import json
 
 # Puerto donde lanzar el servidor, utilizamos uno cualquiera superior a 1024
-PORT = 2023
+PORT = 2025
 
 
 def obtener_list():
@@ -57,7 +57,7 @@ class testHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 Handler = testHTTPRequestHandler
 
 httpd = socketserver.TCPServer(("", PORT), Handler)
-print("serving at port", PORT)
+print("Sirviendo en el puerto: ", PORT)
 try:
     httpd.serve_forever()
 except KeyboardInterrupt:
