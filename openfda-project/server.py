@@ -6,6 +6,7 @@ import socketserver
 PORT = 8000
 
 
+
 class testHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
     # GET
     URL_APIOPENFDA = "api.fda.gov"
@@ -219,7 +220,7 @@ class testHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(bytes(resultado_html, "utf8"))
         elif 'redirect' in self.path:
             print("Redirigimos a la página principal.")
-            self.send_error(302)
+            self.send_response(302)
             self.send_header('Location', 'http://localhost:' + str(PORT))
             self.end_headers()
         elif 'secret' in self.path:
