@@ -218,6 +218,7 @@ class testHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             resultado_html = self.pag_web(compañias)
             self.wfile.write(bytes(resultado_html, "utf8"))
         elif 'redirect' in self.path:
+            print("Redirigimos a la página principal.")
             self.send_error(302)
             self.send_header('Location', 'http://localhost:' + str(PORT))
             self.end_headers()
