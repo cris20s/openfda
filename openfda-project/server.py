@@ -213,8 +213,8 @@ class testHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             archivo_info = json.loads(info)
             buscador_de_compañias = archivo_info['results']
 
-            for event in buscador_de_compañias:
-                compañias.append(event['openfda']['manufacturer_name'][0])
+            for resultado in buscador_de_compañias:
+                compañias.append(resultado['openfda']['manufacturer_name'][0])
             resultado_html = self.pag_web(compañias)
             self.wfile.write(bytes(resultado_html, "utf8"))
         elif 'redirect' in self.path:
